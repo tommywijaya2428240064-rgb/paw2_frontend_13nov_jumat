@@ -1,14 +1,18 @@
 import React from 'react'
 import { Outlet } from 'react-router'
 import ThemeSwap from '../components/ThemeSwap'
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 
 const PublicLayout = () => {
   return (
-    <div>
-        <h1>HEADER</h1>
+    <div className='min-h-screen flex flex-col'>
+        <Navbar/>
         <ThemeSwap/>
-        <Outlet/>
-        <footer>FOOTER </footer>
+        <main className= 'flex-1'>
+          <Outlet/>
+        </main>
+        <Footer/>
     </div>
   )
 }
